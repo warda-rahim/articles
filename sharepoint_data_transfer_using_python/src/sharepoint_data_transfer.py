@@ -62,7 +62,7 @@ def upload_file_to_sharepoint(context=CONTEXT, dir_name:str=SHAREPOINT_FOLDER_NA
 
 
 def upload_dataframe_to_sharepoint(df:pd.DataFrame, context=CONTEXT, dir_name:str=SHAREPOINT_FOLDER_NAME, file_name:str=WRITE_FILE_NAME):
-    """Access sharepoint with credential and upload dataframe.
+    """Access sharepoint with credentials and upload dataframe.
     Args:
         df (pd.DataFrame): Pandas dataframe to be written to sharepoint.
         context (office365.sharepoint.client_context.ClientContext): Authentication for sharepoint connection. Defaults to connect_to_sharepoint(SITE_URL, CLIENT_ID, CLIENT_SECRET).
