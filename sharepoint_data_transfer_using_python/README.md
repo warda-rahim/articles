@@ -25,7 +25,7 @@ pip install Office365-REST-Python-Client
 Microsoft SharePoint Online source connection uses app-based authentication (Client ID and Client Secret) instead of user-based authentication (Username and Password).
 Follow the instructions [here](https://support.google.com/workspacemigrate/answer/9545544?hl=en#:~:text=In%20your%20SharePoint%20Online%20tenant,aspx%20page.&text=Next%20to%20Client%20ID%20and,in%20your%20SharePoint%20Online%20environment) to create app-based credentials for SharePoint Online.
 
-For authentication, we then need our access credentials (CLIENT_ID and CLIENT_SECRET) which can be stored in a .env file at project level.
+For authentication, we would then use our access credentials (CLIENT_ID and CLIENT_SECRET) which can be stored in a .env file at project level.
 
     CLIENT_ID = "<CLIENTID>"
     CLIENT_SECRET = "<CLIENT_SECRET>"
