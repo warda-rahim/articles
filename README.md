@@ -4,3 +4,4 @@ insurance_tweedie_approach - [Modelling Insurance Claims Data Using the Tweedie 
 
 gee_zonal_stats - [Zonal Statistics Using Google Earth Engine and Visualisation Using Python](https://medium.com/@wardarahim25/zonal-statistics-using-google-earth-engine-and-visualisation-using-python-fb74cc1b1efc)
 
+sharepoint_data_transfer_using_python - [Microsoft SharePoint Data Transfer Using Python](https://medium.com/@wardarahim25/microsoft-sharepoint-data-transfer-using-python-a7c2721392c)
