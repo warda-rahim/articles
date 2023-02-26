@@ -1,0 +1,9 @@
+flask==2.2.2
+google-cloud-aiplatform==1.21.0
+gunicorn==20.1.0
+matplotlib==3.5.2
+optuna==2.10.1
+pandas==1.5.0
+scikit-learn==1.0.2
+shap==0.41.0
+xgboost==1.5.0
