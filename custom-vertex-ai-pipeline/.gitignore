@@ -1,2 +1,6 @@
-data
-results
+data/
+results/
+notebooks/
+
+.ipynb_checkpoints/
+__pycache__/
