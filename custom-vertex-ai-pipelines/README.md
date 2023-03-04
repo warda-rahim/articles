@@ -24,7 +24,7 @@ Before running the pipeline, the following prerequisites must be completed:
 
 ## Usage
 
-To use the pipeline, follow these steps:
+To run the pipeline, follow these steps:
 
 1. **Clone the repository** to your GCP VM instance.
 2. **Create a virtual Python environment:** You should create a virtual Python environment to run the code in this repository. Follow the instructions [here](https://virtualenv.pypa.io/en/stable/user_guide.html) to create a virtual environment using `virtualenv`.
