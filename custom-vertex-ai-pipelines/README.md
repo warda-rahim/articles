@@ -65,7 +65,7 @@ The repository has the following structure:
     - `app.py`: Flask web application that serves as the entry point for the custom serving container image.
     - `predict.py`: Python script that loads the trained model and provides a `predict` function to make predictions on new data.
     - `requirements.txt`: File listing the Python dependencies needed to run the Flask application and `predict.py`.
-    - `src` folder: Folder containing the Python code needed for unpickling the trained model in `predict.py`.
+    - `src`: Folder containing the Python code needed for unpickling the trained model in `predict.py`.
 
 
 ## Further Reading
