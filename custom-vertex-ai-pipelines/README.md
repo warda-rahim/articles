@@ -55,11 +55,11 @@ The repository has the following structure:
   - `modelling`
   - `utils`
 - `requirements.txt`: Contains Python packages required to run the pipeline and will be used for creating a custom Docker container image for training.
-- `Dockerfile`: Contains the instructions for building the custom Docker images.
-- `sh_0.1_build_image.sh`: Shell script to build the custom Docker images.
-- `sh_0.2_push_image.sh`: Shell script to push the custom Docker images to Google Artifact Registry.
+- `Dockerfile`: Contains the instructions for building the custom training Docker container image.
+- `sh_0.1_build_image.sh`: Shell script to build the custom training container image.
+- `sh_0.2_push_image.sh`: Shell script to push the custom training container image to Google Artifact Registry.
 - `serving_container`: Contains the files required to build the custom serving container image.
-    -  Dockerfile`: Contains the instructions to create the custom serving container image.
+    - `Dockerfile`: Contains the instructions to create the custom serving container image.
     - `sh_0.1_build_image.sh`: Shell script to build the custom serving container image.
     - `sh_0.2_push_image.sh`: Shell script to push the custom serving container image to Google Artifact Registry.
     - `app.py`: Flask web application that serves as the entry point for the custom serving container image.
