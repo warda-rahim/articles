@@ -49,11 +49,11 @@ The repository has the following structure:
 
 - `custom_vertex_ai_pipelines.ipynb`: The main Jupyter Notebook used to run the custom Vertex AI pipeline.
 - `src`: A directory containing the following subdirectories,
-  - `data_preprocessing` 
-  - `feature_engineering`
-  - `feature_selection`
-  - `modelling`
-  - `utils`
+  - `data_preprocessing`: Contains scripts for cleaning and preprocessing the raw data. 
+  - `feature_engineering`: Contains script for handling rare categorical variables and performing one-hot encoding.
+  - `feature_selection`: Contains script for selecting the most important features for modelling using recursive feature elimination.
+  - `modelling`: Contains script for building, training, and evaluating the machine learning model.
+  - `utils`: Contains utility script for extracting image data.
 - `requirements.txt`: Contains Python packages required to run the pipeline and will be used for creating a custom Docker container image for training.
 - `Dockerfile`: Contains the instructions for building the custom training Docker container image.
 - `sh_0.1_build_image.sh`: Shell script to build the custom training container image.
