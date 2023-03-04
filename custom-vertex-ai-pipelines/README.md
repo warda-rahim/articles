@@ -1,6 +1,6 @@
 # Model Deployment Using Custom GCP Vertex AI Pipeline
 
-This repository contains code to create and deploy a custom GCP Vertex AI pipeline. We have used [House Prices - Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) from Kaggle as our use case. The idea is to highlight the workflow of deploying custom models using GCP Vertex AI, therefore the same steps can apply to any other use case. The pipeline consists of the following components:
+This repository contains code to create and deploy a custom GCP Vertex AI pipeline. We have used [House Prices - Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) from Kaggle as our use case. The idea is to highlight the workflow of deploying custom machine learning pipelines using GCP Vertex AI, therefore the same steps can apply to any other use case. The pipeline consists of the following components:
 
 - Data Ingestion
 - Data Preprocessing
@@ -32,15 +32,15 @@ To use the pipeline, follow these steps:
 ```bash
 source /path/to/venv/bin/activate
 ```
-4. **Install the required packages in your activated virtual environmentt:**
+4. **Install the required packages in your activated virtual environment:**
 ```bash
 pip install google-cloud-aiplatform
 pip install kfp
 ```
-5. **Select virtual environment as your kernel in the Jupyter notebook (custom-vertex-ai-pipelines.ipynb):** You can use [pykernel](https://janakiev.com/blog/jupyter-virtual-envs/) to add the virtual environment to your notebook.
+5. **Select your virtual environment as your kernel in the Jupyter Notebook (custom_vertex_ai_pipelines.ipynb):** You can use [ipykernel](https://janakiev.com/blog/jupyter-virtual-envs/) to add the virtual environment to your notebook.
 6. **Build custom training and serving container images:** Before you can run the notebook/pipeline, you would also need to build custom training and serving container images. Follow the instructions in the [article] to build your custom container images.
 
-Once all the steps above are complete, you should be able to run the Jupyter notebook (custom-vertex-ai-pipelines.ipynb). When the pipeline has finished running, you can make predictions by calling the Vertex AI endpoint created in the pipeline. An example is included towards the end of the notebook demonstrating how to call the endpoint and make predictions.
+Once all the steps above are complete, you should be able to run the Jupyter Notebook (custom_vertex_ai_pipelines.ipynb). When the pipeline has finished running, you can make predictions by calling the Vertex AI endpoint created in the pipeline. An example is included towards the end of the notebook demonstrating how to call the endpoint and make predictions.
 
 
 ## Code Structure
@@ -54,13 +54,20 @@ The repository has the following structure:
   - `feature_selection`
   - `modelling`
   - `utils`
-- `requirements.txt`: Contains Python packages required to run the pipeline and will be used for creating custom Docker container image for training.
+- `requirements.txt`: Contains Python packages required to run the pipeline and will be used for creating a custom Docker container image for training.
 - `Dockerfile`: Contains the instructions for building the custom Docker images.
 - `sh_0.1_build_image.sh`: Shell script to build the custom Docker images.
 - `sh_0.2_push_image.sh`: Shell script to push the custom Docker images to Google Artifact Registry.
 - `serving_container`: Contains the files required to build the custom serving container image.
+    -  Dockerfile`: Contains the instructions to create the custom serving container image.
+    - `sh_0.1_build_image.sh`: Shell script to build the custom serving container image.
+    - `sh_0.2_push_image.sh`: Shell script to push the custom serving container image to Google Artifact Registry.
+    - `app.py`: Flask web application that serves as the entry point for the custom serving container image.
+    - `predict.py`: Python script that loads the trained model and provides a `predict` function to make predictions on new data.
+    - `requirements.txt`: File listing the Python dependencies needed to run the Flask application and `predict.py`.
+    - `src` folder: Folder containing the Python code needed for unpickling the trained model in `predict.py`.
 
 
-## Furthe Reading
+## Further Reading
 
 For a more detailed description and step-by-step guidelines, please refer to [my Medium article](https://medium.com/my-article) where I explain how to create and deploy a custom GCP Vertex AI pipeline.
