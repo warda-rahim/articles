@@ -55,14 +55,14 @@ The repository has the following structure:
   - `modelling`: Contains script for building, training, and evaluating the machine learning model.
   - `utils`: Contains utility script for extracting image data.
 - `requirements.txt`: Contains Python packages required to run the pipeline and will be used for creating a custom Docker container image for training.
-- `Dockerfile`: Contains the instructions for building the custom training Docker container image.
+- `Dockerfile`: Contains instructions for building the custom training Docker container image.
 - `sh_0.1_build_image.sh`: Shell script to build the custom training container image.
 - `sh_0.2_push_image.sh`: Shell script to push the custom training container image to Google Artifact Registry.
-- `serving_container`: Contains the files required to build the custom serving container image.
-    - `Dockerfile`: Contains the instructions to create the custom serving container image.
+- `serving_container`: Contains files required to build the custom serving container image.
+    - `Dockerfile`: Contains instructions to create the custom serving container image.
     - `sh_0.1_build_image.sh`: Shell script to build the custom serving container image.
     - `sh_0.2_push_image.sh`: Shell script to push the custom serving container image to Google Artifact Registry.
-    - `app.py`: Flask web application that serves the machine learning model's predictions as an HTTP endpoint.
+    - `app.py`: Defines a Flask web application that serves the machine learning model's predictions as an HTTP endpoint.
     - `predict.py`: Python script that loads the trained model and provides a `predict` function to make predictions on new data.
     - `requirements.txt`: File listing the Python dependencies needed to run the Flask application and `predict.py`.
     - `src`: Folder containing the Python code needed for unpickling the trained model in `predict.py`.
