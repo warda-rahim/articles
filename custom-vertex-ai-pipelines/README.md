@@ -40,7 +40,7 @@ pip install kfp
 5. **Select your virtual environment as your kernel in the Jupyter Notebook (custom_vertex_ai_pipelines.ipynb):** You can use [ipykernel](https://janakiev.com/blog/jupyter-virtual-envs/) to add the virtual environment to your notebook.
 6. **Build custom training and serving container images:** Before you can run the notebook/pipeline, you would also need to build custom training and serving container images. Follow the instructions in the [article] to build your custom container images.
 
-Once all the steps above are complete, you should be able to run the Jupyter Notebook (custom_vertex_ai_pipelines.ipynb). When the pipeline has finished running, you can make predictions by calling the Vertex AI endpoint created in the pipeline. An example is included towards the end of the notebook demonstrating how to call the endpoint and make predictions.
+Once all the steps above are complete, you should be able to run the Jupyter Notebook (`custom_vertex_ai_pipelines.ipynb`). When the pipeline has finished running, you can make predictions by calling the Vertex AI endpoint created in the pipeline. An example is included towards the end of the notebook demonstrating how to call the endpoint and make predictions.
 
 
 ## Code Structure
@@ -62,7 +62,7 @@ The repository has the following structure:
     - `Dockerfile`: Contains the instructions to create the custom serving container image.
     - `sh_0.1_build_image.sh`: Shell script to build the custom serving container image.
     - `sh_0.2_push_image.sh`: Shell script to push the custom serving container image to Google Artifact Registry.
-    - `app.py`: Flask web application that serves as the entry point for the custom serving container image.
+    - `app.py`: Flask web application that serves the machine learning model's predictions as an HTTP endpoint.
     - `predict.py`: Python script that loads the trained model and provides a `predict` function to make predictions on new data.
     - `requirements.txt`: File listing the Python dependencies needed to run the Flask application and `predict.py`.
     - `src`: Folder containing the Python code needed for unpickling the trained model in `predict.py`.
